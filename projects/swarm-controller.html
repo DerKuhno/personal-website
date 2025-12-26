@@ -39,8 +39,8 @@
             <strong>C++ controller node</strong>.
           </li>
           <li>
-            The controller computes per-drone target positions, publishes setpoints, and evaluates how many drones are
-            “in place”.
+            The controller computes per-drone target positions, publishes them, and evaluates how many drones are
+            in place.
           </li>
           <li>
             Each <strong>C++ drone node</strong> updates its position in Gazebo and publishes its current state back to
@@ -49,69 +49,31 @@
         </ul>
 
         <h2>Demo</h2>
-        <p>
-          The formation is the point — a short video/GIF here makes the project instantly understandable. Replace the
-          placeholder below with your best clip (circle + line + scaling).
-        </p>
-
         <figure class="media">
-          <!-- Replace src with your actual demo file (e.g., ../images/ros2-drone-show.mp4 or a GIF) -->
-          <video controls preload="metadata" style="width: 100%; height: auto;">
-            <source src="images/drone-show-demo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <img src="../images/projects/drone_action.gif" alt="Drone action" />
           <figcaption>Gazebo drone show: circle/line formations with adjustable scale.</figcaption>
         </figure>
 
         <h2>System Architecture</h2>
         <p>
           The system is structured as a small ROS 2 network with a UI/interface node, a central controller, and one node
-          per drone. The controller serves as the “brain”: it computes target positions, publishes setpoints, and
-          measures formation completion based on drone state feedback.
+          per drone.
         </p>
 
         <figure class="media">
           <!-- Replace with your own architecture diagram (recommended) -->
-          <img src="images/ros2-architecture.png" alt="Diagram showing interface node, controller node, and multiple drone nodes connected by ROS 2 topics." />
+          <img src="../images/projects/node_graph.png" alt="Diagram showing interface node, controller node, and multiple drone nodes connected by ROS 2 topics." />
           <figcaption>High-level ROS 2 node architecture and topic flow.</figcaption>
         </figure>
 
-        <h3>Nodes</h3>
-        <ul>
-          <li><strong>Interface node (Python):</strong> user input (N, formation, scale) + displays progress/completion.</li>
-          <li><strong>Controller node (C++):</strong> computes target positions, publishes setpoints, evaluates accuracy.</li>
-          <li><strong>Drone nodes (C++):</strong> subscribe to setpoints, update Gazebo pose, publish current pose back.</li>
-        </ul>
-
         <h3>Message Flow (Publish / Subscribe)</h3>
         <ol>
-          <li><strong>Interface → Controller:</strong> formation type + scale (+ drone count)</li>
+          <li><strong>Interface → Controller:</strong> formation type + scale</li>
           <li><strong>Controller → Drones:</strong> per-drone target position setpoints</li>
-          <li><strong>Drones → Controller:</strong> current positions (state feedback)</li>
-          <li><strong>Controller → Interface:</strong> % of drones in correct place</li>
+          <li><strong>Drones → Controller:</strong> current positions</li>
+          <li><strong>Controller → Interface:</strong> % of drones in correct place (action feedback)</li>
           <li><strong>Interface:</strong> reports goal completion when 100% reached</li>
         </ol>
-
-        <h2>Key Implementation Details</h2>
-        <h3>Formation generation</h3>
-        <p>
-          The controller generates target positions for a <strong>variable number of drones</strong>:
-          circle targets are evenly spaced by angle (scale controls radius), and line targets are evenly spaced along a
-          segment (scale controls length).
-        </p>
-
-        <h3>Closed-loop feedback</h3>
-        <p>
-          Each drone publishes its current position back to the controller. The controller uses this state feedback to
-          compute the percentage of drones within a chosen tolerance of their targets, and sends progress updates to the
-          interface node.
-        </p>
-
-        <h3>Completion metric</h3>
-        <p>
-          Formation completion is defined by a simple, interpretable rule: a drone is “correct” if its distance to its
-          assigned target is below a threshold. The controller aggregates this into a single progress value (0–100%).
-        </p>
 
         <h2>Results & Learnings</h2>
         <ul>
@@ -124,20 +86,11 @@
           <li>The end result is visually satisfying — the circle/line formations look great in simulation.</li>
         </ul>
 
-        <h2>What next</h2>
-        <ul>
-          <li>Add more formations (grid, spiral, letters) and smooth transitions between them.</li>
-          <li>Use trajectories (splines) instead of direct setpoints for more “show-like” motion.</li>
-          <li>Add collision avoidance / spacing constraints for larger N.</li>
-          <li>Package everything with a parameterized launch setup and reproducible configs.</li>
-        </ul>
+        <h2>Next steps</h2>
+        <p>
+          Using ROS 2 in real project. I would love to see some robots in action!
+        </p>
 
-        <h2>Resources</h2>
-        <ul>
-          <li><strong>Code:</strong> link your repo here (or add a GitHub button near the top)</li>
-          <li><strong>Build/Run:</strong> short commands + dependencies</li>
-          <li><strong>Demo media:</strong> video/GIF + screenshots</li>
-        </ul>
       </article>
     </main>
 

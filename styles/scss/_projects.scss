@@ -109,3 +109,11 @@
 .pdf-links {
   margin: 0;
 }
+
+.project__image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block; // avoids small baseline gap under images
+}
