@@ -1,0 +1,33 @@
+@use "tokens" as *;
+
+// Research Grid
+.interest-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+
+  // optional: centers the whole 3-column block if container is wider
+  justify-items: center;
+}
+
+.interest {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // centers icon + title horizontally
+  text-align: center;  // centers the text itself
+}
+
+.interest__icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.interest__title {
+  margin: 0; // optional: removes default h3 margin weirdness
+}

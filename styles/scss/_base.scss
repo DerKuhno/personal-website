@@ -1,0 +1,46 @@
+@use "tokens" as *;
+
+/* Base / reset-ish */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $bg;
+  color: $text;
+  font-family: $font-sans;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* links */
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Layout primitive */
+.container {
+  width: min(100% - 2 * $gutter, $max-width);
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {
+  padding: 3rem 0;
+}
+
+.section__title {
+  margin: 0 0 1.25rem 0;
+}

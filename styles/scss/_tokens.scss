@@ -1,0 +1,12 @@
+/* Design tokens (variables) */
+$bg: #ffffff;
+$hero-bg: #3c414a;
+$card-bg: #b5aeb0;
+$text: #111;
+$text-on-dark: #ffffff;
+
+$max-width: 1100px;
+$gutter: 1.25rem;
+
+/* Aptos stack (falls back if not installed) */
+$font-sans: "Aptos", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
