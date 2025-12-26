@@ -16,7 +16,7 @@
         <div class="hero__content">
           <h1 class="hero__title">Nils Kuhn</h1>
           <p class="hero__subtitle">I am an M.S. student in Electrical Engineering at Stanford University, 
-            where I work with Jeannette Bohg on dexterous manipulation. Previously, I interned at the European 
+            where I am part of SAIL and work with Jeannette Bohg on dexterous manipulation. Previously, I interned at the European 
             Space Agency under the supervision of Federico Antonello, researching continual learning methods for 
             anomaly detection. I hold a B.Sc. in Mechatronics and a B.Sc. in Engineering and Business Administration 
             from Leibniz University Hannover. There, I completed my thesis under the supervision of Marc Wurz 
@@ -48,7 +48,7 @@
           <h2 class="section__title" id="research-title">Research interests</h2>
 
           <p> My research interests broadly span robot learning, with a focus on 
-            vision language action models and diffusion based approaches for tasks involving mobile manipulation, 
+            vision language action models and diffusion-based approaches for tasks involving mobile manipulation, 
             long horizon planning, dexterous manipulation or super human performance.
             Specifically, I am curious about hierarchical approaches and approaches that support continual learning.</p>
 
@@ -78,9 +78,9 @@
           <ul class="project-list">
             <li class="project">
               <a class="project__card">
-                <img class="project__image" src="images/projects/loading.png" alt="Screenshot of the swarm in movement" />
+                <img class="project__image" src="images/projects/loading.png" alt="loading" />
                 <div class="project__content">
-                  <h3 class="project__title">Continual Learning ... Anomaly prediction ... Sattelite Telemetry</h3>
+                  <h3 class="project__title">Continual Learning ... Anomaly Detection ... Satellite Telemetry</h3>
                   <p class="project__text"> Work in progress...</p>
                 </div>
               </a>
@@ -101,16 +101,17 @@
                 <div class="project__content">
                   <h3 class="project__title">Continuous-Time Diffusion Policies for Visuomotor Control: <br>
                     A Stochastic Calculus Perspective</h3>
-                  <p class="project__text">Reframed diffusion policies as controlled SDEs (VP/VE/CLD) for visuomotor control.
-                      Implemented multiple samplers and compared robustness on the PushT benchmark.
-                      Found VP-SDE performs best and most consistently (≈0.78-0.80 success).</p>
+                  <p class="project__text">We reframed diffusion policies as controlled SDEs (Variance 
+                    Preserving / Variance Exploding / Critically Damped Langevin Dynamics) for visuomotor control. Then, we
+                    implemented multiple samplers and compared robustness on the PushT benchmark. Our experiments found that 
+                    VP-SDE performs best and most consistently (≈0.78-0.80 success).</p>
                 </div>
               </a>
             </li>
 
             <li class="project">
               <a class="project__card" href="https://cs231n.stanford.edu/2025/papers/text_file_840560503-CS_231n_Final_Project.pdf">
-                <img class="project__image" src="images/projects/GeoVision.png" alt="Project 3 preview image" />
+                <img class="project__image" src="images/projects/GeoVision.png" alt="Image distribution over SF" />
                 <div class="project__content">
                   <h3 class="project__title">GeoVision: Fine-Grained Urban Geolocation in San Francisco via Distribution-Aware Visual Models</h3>
                   <p class="project__text">GeoVision predicts where a street photo was taken within San Francisco using a Vision 
@@ -124,15 +125,47 @@
 
             <li class="project">
               <a class="project__card" href="https://cs224r.stanford.edu/projects/pdfs/CS224R_Project-1.pdf">
-                <img class="project__image" src="images/projects/mario_frame.png" alt="Project 4 preview image" />
+                <img class="project__image" src="images/projects/mario_frame.png" alt="Super Mario Frame" />
                 <div class="project__content">
                   <h3 class="project__title">MARIO: Reinforcement Learning on Image Observations</h3>
-                  <p class="project__text">We trained PPO and DQN agents to play Super Mario Bros. directly 
-                    from raw pixels (stacked grayscale frames with the full 12-action control space), 
-                    achieving 96.32% Level 1-1 completion with PPO using a top-k (k=3) pseudo-greedy 
-                    inference strategy and pushing DQN to ~91% with PPO-inspired architecture/preprocessing 
-                    changes; we then evaluated transfer from Level 1-1 to Level 1-2 and found generalization 
-                    remained challenging under visual/dynamics shift even after retraining.</p>
+                  <p class="project__text">We trained PPO and DQN agents to play Super Mario Bros directly 
+                    from raw pixels (stacked grayscale frames with the full 12-action control space). Our best agent 
+                    achieved a completion rate of 96.32% on Level 1-1 using PPO and a top-k pseudo-greedy 
+                    inference strategy. This performance is compared against other PPO and DQN agents. 
+                    We investigated how architecture and preprocessing influences performance and evaluated transfer performance
+                    from Level 1-1 to Level 1-2.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
+              <a class="project__card" href="projects/trading.html">
+                <img class="project__image" src="images/projects/trading.png" alt="Trading Niche Markets" />
+                <div class="project__content">
+                  <h3 class="project__title">A Comparative Study of Trading Using
+                    Deep Q-Learning and Double Deep Q-Learning in Niche Markets</h3>
+                  <p class="project__text">We investigated whether reinforcement-learning trading agents can 
+                    perform well in niche markets by modeling trading as an MDP and comparing DQN vs Double 
+                    DQN across three different action-space designs. Using data of the First North Growth 
+                    Market and Novotek (with OMX30 as context), we evaluated performance with ROI and 
+                    Sortino ratio across multiple runs for two assets. We showed how action-space choice 
+                    influences stability and trading behavior, and that Double DQN generally delivers 
+                    more robust risk-adjusted performance than standard DQN.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
+              <a class="project__card" href="projects/readmission.html">
+                <img class="project__image" src="images/projects/readmission.png" alt="Hospital icon" />
+                <div class="project__content">
+                  <h3 class="project__title">Predicting Hospital Readmission from Clinical Discharge Summaries</h3>
+                  <p class="project__text">We built a machine-learning pipeline to predict hospital readmission risk 
+                    using only free-text discharge summaries from the MIMIC-IV dataset. We compared multiple text 
+                    representations like keyword features, ClinicalBERT embeddings, and LLM-generated summary embeddings across 
+                    several classifiers (Logistic Regression, tree models, XGBoost, and a neural net). Our best model (a Random Forest 
+                    on LLM-based embeddings) achieved roughly F1 ≈ 0.79 and Accuracy ≈ 0.74, showing that 
+                    clinical notes contain a signal for readmission prediction.</p>
                 </div>
               </a>
             </li>
@@ -155,7 +188,7 @@
                     where users can spawn any number of drones and command them into a scalable line 
                     or circle formation. A Python interface node uses an action client to send formation 
                     settings to a C++ controller node, which coordinates the drone nodes via
-                    publisher/subscriber communication. Live feedback of the progress is send back to the interface. </p>
+                    publisher/subscriber communication. Live feedback of the progress is sent back to the interface. </p>
                 </div>
               </a>
             </li>

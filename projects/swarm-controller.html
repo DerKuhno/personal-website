@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nils Kuhn</title>
-    <meta name="description" content="Project - Continuous-Time Diffusion Policies for Visuomotor Control" />
+    <meta name="description" content="Project - Learning ROS 2: Swarm Controller" />
     <link rel="stylesheet" href="../styles/main.css" /> 
   </head>
 
@@ -17,13 +17,13 @@
           <h1 class="hero__title">Learning ROS 2: Swarm Controller</h1>
 
           <p>
-          To learn ROS 2 in a practical way, I built a small “drone show” in Gazebo: a variable number of drones can be
+          To learn ROS 2 hands-on, I built a small “drone show” in Gazebo: a variable number of drones can be
           spawned and commanded into either a <strong>circle</strong> or a <strong>line</strong> formation. The user can
           scale the formation size and receives feedback on how many drones have reached their target positions.
           </p>
 
           <div class="home__row">
-            <a class="home__top" href="../index.html">Back to Home</a>
+            <a class="home__top" href="../index.html">Back to home</a>
           </div>
         </div>
       </div>
@@ -43,7 +43,7 @@
             in place.
           </li>
           <li>
-            Each <strong>C++ drone node</strong> updates its position in Gazebo and publishes its current state back to
+            Each <strong>C++ drone node</strong> updates its state in Gazebo and publishes its current position back to
             the controller for closed-loop feedback.
           </li>
         </ul>
@@ -71,7 +71,7 @@
           <li><strong>Interface → Controller:</strong> formation type + scale</li>
           <li><strong>Controller → Drones:</strong> per-drone target position setpoints</li>
           <li><strong>Drones → Controller:</strong> current positions</li>
-          <li><strong>Controller → Interface:</strong> % of drones in correct place (action feedback)</li>
+          <li><strong>Controller → Interface:</strong> % of drones in the correct place (action feedback)</li>
           <li><strong>Interface:</strong> reports goal completion when 100% reached</li>
         </ol>
 
@@ -85,11 +85,6 @@
           </li>
           <li>The end result is visually satisfying — the circle/line formations look great in simulation.</li>
         </ul>
-
-        <h2>Next steps</h2>
-        <p>
-          Using ROS 2 in real project. I would love to see some robots in action!
-        </p>
 
       </article>
     </main>
