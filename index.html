@@ -15,8 +15,9 @@
 
         <div class="hero__content">
           <h1 class="hero__title">Nils Kuhn</h1>
-          <p class="hero__subtitle">I am an M.S. student in Electrical Engineering at Stanford University, 
-            where I am part of SAIL and work with Jeannette Bohg on dexterous manipulation. Previously, I interned at the European 
+          <p class="hero__subtitle">I work as a Research Scientist with the FAIR Team at Meta AI. I 
+            just completed my M.S. in Electrical Engineering at Stanford University, where I was part 
+            of SAIL and worked with Jeannette Bohg on dexterous manipulation. Previously, I interned at the European 
             Space Agency under the supervision of Federico Antonello, researching continual learning methods for 
             anomaly detection. I hold a B.Sc. in Mechatronics and a B.Sc. in Engineering and Business Administration 
             from Leibniz University Hannover. There, I completed my thesis under the supervision of Marc Wurz 
@@ -37,6 +38,7 @@
             <a class="icon-link-1" href="https://github.com/DerKuhno" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="icon-link-1" href="https://www.linkedin.com/in/nils-kuhn/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             <a class="icon-link-1" href="mailto:nfkuhn@stanford.edu">Email</a>
+            <a class="icon-link-1" href="Resume_Nils_Kuhn.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           </div>
         </div>
       </div>
@@ -73,15 +75,36 @@
 
       <section class="section" aria-labelledby="projects-title">
         <div class="container">
-          <h2 class="section__title" id="projects-title">Coming soon...</h2>
+          <h2 class="section__title" id="projects-title">Publications</h2>
 
           <ul class="project-list">
             <li class="project">
-              <a class="project__card">
-                <img class="project__image" src="images/projects/loading.png" alt="loading" />
+              <a class="project__card" href="https://arxiv.org/abs/2608.01402">
+                <img class="project__image" src="images/projects/robot hand.png" alt="Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them" />
                 <div class="project__content">
-                  <h3 class="project__title">Continual Learning ... Anomaly Detection ... Satellite Telemetry</h3>
-                  <p class="project__text"> Work in progress...</p>
+                  <h3 class="project__title">Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them</h3>
+                  <p class="project__text"> Why do Vision-Language-Action models struggle with contact-rich manipulation tasks 
+                    that demand precise physical interaction? While prior work has focused on fixing these failures with 
+                    force-augmented architectures and training-time regularizers, we dig into the root causes. We identify 
+                    two distinct failure modes: precision failures, stemming from a mismatch in flow-matching policy training, 
+                    and force failures, arising from the unique structure of force signals. By addressing each with a targeted 
+                    mechanism, we introduce FACT—achieving a 66% average success rate across five contact-rich tasks, compared 
+                    to 41% for the best prior baseline, validated across almost 2,500 real-world rollouts.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
+              <a class="project__card" href="https://www.sciencedirect.com/science/article/pii/S0094576526005187">
+                <img class="project__image" src="images/projects/satellite.png" alt="Validation-gated continual learning for anomaly detection in satellite telemetry" />
+                <div class="project__content">
+                  <h3 class="project__title">Validation-gated continual learning for anomaly detection in satellite telemetry</h3>
+                  <p class="project__text"> Satellite health monitoring relies on anomaly detection, but traditional deep learning 
+                    models are static, struggling when data drifts or is scarce, like at the start of a new mission. Our framework 
+                    periodically adapts anomaly detection models using continual and active learning, while ensuring every update 
+                    is validated before deployment. Benchmarked on the European Space Agency's satellite telemetry dataset, our approach 
+                    delivers a 92.9% event-wise F1 score. A 14.3% improvement over static baselines, while using less than 5% of the original 
+                    training data.</p>
                 </div>
               </a>
             </li>
