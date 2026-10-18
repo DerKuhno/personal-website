@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nils Kuhn</title>
-    <meta name="description" content="Webpage of Nils Kuhn — Robotics, AI, and Machine Learning." />
+    <meta name="description" content="Webpage of Nils Kuhn — Reinforcement Learning, AI, and Machine Learning." />
     <link rel="stylesheet" href="styles/main.css" /> 
   </head>
 
@@ -15,29 +15,27 @@
 
         <div class="hero__content">
           <h1 class="hero__title">Nils Kuhn</h1>
-          <p class="hero__subtitle">I work as a Research Scientist with the FAIR Team at Meta AI. I 
-            just completed my M.S. in Electrical Engineering at Stanford University, where I was part 
-            of SAIL and worked with Jeannette Bohg on dexterous manipulation. Previously, I interned at the European 
-            Space Agency under the supervision of Federico Antonello, researching continual learning methods for 
-            anomaly detection. I hold a B.Sc. in Mechatronics and a B.Sc. in Engineering and Business Administration 
-            from Leibniz University Hannover. There, I completed my thesis under the supervision of Marc Wurz 
-            on thin-film insulation, and I worked with Christian Ospelkaus on trapped-ion quantum computing. </p>
+          <p class="hero__subtitle">I am a Research Scientist at Meta FAIR. I received my M.S. in Electrical
+            Engineering from Stanford University, where I worked with Jeannette Bohg in the Stanford AI Lab on
+            force-aware VLA policies (CoRL 2026). Before that, I interned at the European Space Agency and built
+            continual learning methods for anomaly detection in satellite telemetry (first author, Acta Astronautica 2026).
+            I hold a B.Sc. in Mechatronics and a B.Sc. in Engineering and Business Administration from Leibniz
+            University Hannover. During my undergrad, I completed my thesis under the supervision of Marc Wurz on
+            thin-film insulation, and I worked with Christian Ospelkaus on trapped-ion quantum computing.</p>
 
-          <p class="hero__subtitle">I am supported by a Tuition Fellowship from Stanford University, 
-            as well as scholarships from the German Academic Exchange Service (DAAD) and the Friedrich-Ebert-Stiftung. 
-            During my undergraduate studies, I received the Jürgen Ulderup Award (B.Sc. Mechatronics) and the 
-            Wilhelm Launhardt Award (B.Sc. Engineering and Business Administration), and I was named to the 
-            Dean's List in 2023 and 2024 for both programs. </p>
+          <p class="hero__subtitle">My studies were supported by a Stanford Tuition Fellowship and scholarships
+            from the German Academic Exchange Service (DAAD) and the Friedrich-Ebert-Stiftung. I received the
+            Jürgen Ulderup Award and the Wilhelm Launhardt Award for my two bachelor’s degrees.</p>
 
           <p class="hero__contact">
             Feel free to contact me:
-            <a class="hero__email" href="mailto:nfkuhn@stanford.edu">nfkuhn@stanford.edu</a>
+            <a class="hero__email" href="mailto:nkuhn373@gmail.com">nkuhn373@gmail.com</a>
           </p>
 
           <div class="hero__links" aria-label="Links">
             <a class="icon-link-1" href="https://github.com/DerKuhno" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="icon-link-1" href="https://www.linkedin.com/in/nils-kuhn/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="icon-link-1" href="mailto:nfkuhn@stanford.edu">Email</a>
+            <a class="icon-link-1" href="mailto:nkuhn373@gmail.com">Email</a>
             <a class="icon-link-1" href="Resume_Nils_Kuhn.pdf" target="_blank" rel="noopener noreferrer">CV</a>
           </div>
         </div>
@@ -49,27 +47,10 @@
         <div class="container">
           <h2 class="section__title" id="research-title">Research interests</h2>
 
-          <p> My research interests broadly span robot learning, with a focus on 
-            vision language action models and diffusion-based approaches for tasks involving mobile manipulation, 
-            long horizon planning, dexterous manipulation or super human performance.
-            Specifically, I am curious about hierarchical approaches and approaches that support continual learning.</p>
-
-          <ul class="interest-grid">
-            <li class="interest">
-              <img class="interest__icon" src="images/mobile_manipulation.png" alt="" />
-              <h3 class="interest__title">Mobile manipulation</h3>
-            </li>
-
-            <li class="interest">
-              <img class="interest__icon" src="images/dexterous_manipulation.png" alt="" />
-              <h3 class="interest__title">Dexterous manipulation</h3>
-            </li>
-
-            <li class="interest">
-              <img class="interest__icon" src="images/continual_learning.png" alt="" />
-              <h3 class="interest__title">Continual Learning</h3>
-            </li>
-          </ul>
+          <p>My research focuses on machine learning for decision-making from noisy data. I am interested in
+            reinforcement learning, world models and predictive modeling. In particular, I study methods
+            that generalize and stay reliable when the data distribution shifts. I have applied these ideas to
+            robot control, satellite operations and trading.</p>
         </div>
       </section>
 
@@ -77,36 +58,63 @@
         <div class="container">
           <h2 class="section__title" id="projects-title">Publications</h2>
 
-          <ul class="project-list">
-            <li class="project">
-              <a class="project__card" href="https://arxiv.org/abs/2608.01402">
-                <img class="project__image" src="images/projects/robot hand.png" alt="Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them" />
-                <div class="project__content">
-                  <h3 class="project__title">Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them</h3>
-                  <p class="project__text"> Why do Vision-Language-Action models struggle with contact-rich manipulation tasks 
-                    that demand precise physical interaction? While prior work has focused on fixing these failures with 
-                    force-augmented architectures and training-time regularizers, we dig into the root causes. We identify 
-                    two distinct failure modes: precision failures, stemming from a mismatch in flow-matching policy training, 
-                    and force failures, arising from the unique structure of force signals. By addressing each with a targeted 
-                    mechanism, we introduce FACT—achieving a 66% average success rate across five contact-rich tasks, compared 
-                    to 41% for the best prior baseline, validated across almost 2,500 real-world rollouts.</p>
+          <ul class="pub-list">
+            <li class="pub">
+              <img class="pub__image" src="images/projects/robot hand.png" alt="" />
+              <div class="pub__content">
+                <h3 class="pub__title">
+                  <a href="https://arxiv.org/abs/2608.01402">Demystifying When and Why VLAs Fail in Contact-Rich Tasks and How to Fix Them</a>
+                </h3>
+                <p class="pub__authors">C. Parés-Morlans, <strong>N. Kuhn</strong>, I. Liu, A. Longhini, J. Bohg</p>
+                <p class="pub__venue">Conference on Robot Learning (CoRL), 2026</p>
+                <div class="pub__links">
+                  <a class="pub__btn" href="https://arxiv.org/abs/2608.01402">arXiv</a>
+                  <a class="pub__btn" href="https://stanford-iprl-lab.github.io/fact/">Project page</a>
+                  <a class="pub__btn" href="https://github.com/stanford-iprl-lab/fact">Code</a>
+                  <button class="pub__btn" type="button" aria-expanded="false" aria-controls="bib-fact">BibTeX</button>
                 </div>
-              </a>
+<pre class="pub__bibtex" id="bib-fact" hidden>@article{paresmorlans2026fact,
+  title   = {Demystifying When and Why {VLAs} Fail in Contact-Rich Tasks and How to Fix Them},
+  author  = {Par{\'e}s-Morlans, Carlota and Kuhn, Nils and Liu, Isabel and Longhini, Alberta and Bohg, Jeannette},
+  journal = {arXiv preprint arXiv:2608.01402},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2608.01402}
+}</pre>
+                <p class="pub__summary">We trace VLA failures in contact-rich manipulation to two root causes,
+                  precision failures from flow-matching training and force failures from the structure of force signals,
+                  and fix each with a targeted mechanism in FACT, which reaches a 66% average success rate across five
+                  real-world tasks versus 41% for the best prior baseline.</p>
+              </div>
             </li>
 
-            <li class="project">
-              <a class="project__card" href="https://www.sciencedirect.com/science/article/pii/S0094576526005187">
-                <img class="project__image" src="images/projects/satellite.png" alt="Validation-gated continual learning for anomaly detection in satellite telemetry" />
-                <div class="project__content">
-                  <h3 class="project__title">Validation-gated continual learning for anomaly detection in satellite telemetry</h3>
-                  <p class="project__text"> Satellite health monitoring relies on anomaly detection, but traditional deep learning 
-                    models are static, struggling when data drifts or is scarce, like at the start of a new mission. Our framework 
-                    periodically adapts anomaly detection models using continual and active learning, while ensuring every update 
-                    is validated before deployment. Benchmarked on the European Space Agency's satellite telemetry dataset, our approach 
-                    delivers a 92.9% event-wise F1 score. A 14.3% improvement over static baselines, while using less than 5% of the original 
-                    training data.</p>
+            <li class="pub">
+              <img class="pub__image" src="images/projects/satellite.png" alt="" />
+              <div class="pub__content">
+                <h3 class="pub__title">
+                  <a href="https://www.sciencedirect.com/science/article/pii/S0094576526005187">Validation-Gated Continual Learning for Anomaly Detection in Satellite Telemetry</a>
+                </h3>
+                <p class="pub__authors"><strong>N. Kuhn</strong>, B. Sánchez Gómez, N. Moreno Blasco, P. Caserman, F. Antonello</p>
+                <p class="pub__venue">Acta Astronautica, 2026</p>
+                <div class="pub__links">
+                  <a class="pub__btn" href="https://www.sciencedirect.com/science/article/pii/S0094576526005187">Paper</a>
+                  <a class="pub__btn" href="https://github.com/DerKuhno/validation-gated-continual-learning">Code</a>
+                  <button class="pub__btn" type="button" aria-expanded="false" aria-controls="bib-satellite">BibTeX</button>
                 </div>
-              </a>
+<pre class="pub__bibtex" id="bib-satellite" hidden>@article{KUHN2026971,
+  title   = {Validation-Gated Continual Learning for Anomaly Detection in Satellite Telemetry},
+  author  = {Kuhn, Nils and S{\'a}nchez G{\'o}mez, Bruno and Moreno Blasco, Natalia and Caserman, Polona and Antonello, Federico},
+  journal = {Acta Astronautica},
+  volume  = {249},
+  pages   = {971--985},
+  year    = {2026},
+  issn    = {0094-5765},
+  doi     = {10.1016/j.actaastro.2026.07.065},
+  url     = {https://www.sciencedirect.com/science/article/pii/S0094576526005187}
+}</pre>
+                <p class="pub__summary">We adapt satellite anomaly detectors over time with continual and active
+                  learning, deploying each update only after it passes validation, and reach a 92.9% F0.5 score on
+                  ESA's telemetry benchmark using under 5% of the original training data.</p>
+              </div>
             </li>
 
           </ul>
@@ -119,22 +127,6 @@
 
           <ul class="project-list">
             <li class="project">
-              <a class="project__card" href="projects/unlearning.html">
-                <img class="project__image" src="images/projects/erasing.png" alt="Diffusion processes" />
-                <div class="project__content">
-                  <h3 class="project__title"> Severance: When Unlearning Crime Unlearns Survival</h3>
-                  <p class="project__text">We reproduced and extended Lee et al.'s UNDO framework for robustifying LLM 
-                    unlearning against relearning attacks by testing it on Pythia 160M with the TOFU benchmark. We test unlearning 
-                    within a multi agent simulation with Mistral 7B. In our multi agent crime 
-                    simulation, our adapted method drove criminal behavior to 0% across all 80 rounds. However, agents 
-                    then failed to survive, choosing the correct life saving action only 20% of the time versus 54% for the 
-                    baseline model. These results suggest that current unlearning techniques are suppressing target behavior 
-                    while eroding adjacent reasoning that the model needs to function.</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="project">
               <a class="project__card" href="projects/diffusion.html">
                 <img class="project__image" src="images/projects/diffusion.png" alt="Diffusion processes" />
                 <div class="project__content">
@@ -144,35 +136,6 @@
                     Preserving / Variance Exploding / Critically Damped Langevin Dynamics) for visuomotor control. Then, we
                     implemented multiple samplers and compared robustness on the PushT benchmark. Our experiments found that 
                     VP-SDE performs best and most consistently (≈0.78-0.80 success).</p>
-                </div>
-              </a>
-            </li>
-
-            <li class="project">
-              <a class="project__card" href="https://cs231n.stanford.edu/2025/papers/text_file_840560503-CS_231n_Final_Project.pdf">
-                <img class="project__image" src="images/projects/GeoVision.png" alt="Image distribution over SF" />
-                <div class="project__content">
-                  <h3 class="project__title">GeoVision: Fine-Grained Urban Geolocation in San Francisco via Distribution-Aware Visual Models</h3>
-                  <p class="project__text">GeoVision predicts where a street photo was taken within San Francisco using a Vision 
-                    Transformer (StreetCLIP) plus custom geolocation heads. A 31x31 grid classifier reaches 66.8% top-1 accuracy, 
-                    while a probabilistic Gaussian head achieves ~600m mean localization error and provides uncertainty estimates. 
-                    The project includes map-based visualizations and attention rollouts to show what cues the model uses when 
-                    localizing images. </p>
-                </div>
-              </a>
-            </li>
-
-            <li class="project">
-              <a class="project__card" href="https://cs224r.stanford.edu/projects/pdfs/CS224R_Project-1.pdf">
-                <img class="project__image" src="images/projects/mario_frame.png" alt="Super Mario Frame" />
-                <div class="project__content">
-                  <h3 class="project__title">MARIO: Reinforcement Learning on Image Observations</h3>
-                  <p class="project__text">We trained PPO and DQN agents to play Super Mario Bros directly 
-                    from raw pixels (stacked grayscale frames with the full 12-action control space). Our best agent 
-                    achieved a completion rate of 96.32% on Level 1-1 using PPO and a top-k pseudo-greedy 
-                    inference strategy. This performance is compared against other PPO and DQN agents. 
-                    We investigated how architecture and preprocessing influences performance and evaluated transfer performance
-                    from Level 1-1 to Level 1-2.</p>
                 </div>
               </a>
             </li>
@@ -195,6 +158,51 @@
             </li>
 
             <li class="project">
+              <a class="project__card" href="projects/unlearning.html">
+                <img class="project__image" src="images/projects/erasing.png" alt="Diffusion processes" />
+                <div class="project__content">
+                  <h3 class="project__title"> Severance: When Unlearning Crime Unlearns Survival</h3>
+                  <p class="project__text">We reproduced and extended Lee et al.'s UNDO framework for robustifying LLM 
+                    unlearning against relearning attacks by testing it on Pythia 160M with the TOFU benchmark. We test unlearning 
+                    within a multi agent simulation with Mistral 7B. In our multi agent crime 
+                    simulation, our adapted method drove criminal behavior to 0% across all 80 rounds. However, agents 
+                    then failed to survive, choosing the correct life saving action only 20% of the time versus 54% for the 
+                    baseline model. These results suggest that current unlearning techniques are suppressing target behavior 
+                    while eroding adjacent reasoning that the model needs to function.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
+              <a class="project__card" href="https://cs224r.stanford.edu/projects/pdfs/CS224R_Project-1.pdf">
+                <img class="project__image" src="images/projects/mario_frame.png" alt="Super Mario Frame" />
+                <div class="project__content">
+                  <h3 class="project__title">MARIO: Reinforcement Learning on Image Observations</h3>
+                  <p class="project__text">We trained PPO and DQN agents to play Super Mario Bros directly 
+                    from raw pixels (stacked grayscale frames with the full 12-action control space). Our best agent 
+                    achieved a completion rate of 96.32% on Level 1-1 using PPO and a top-k pseudo-greedy 
+                    inference strategy. This performance is compared against other PPO and DQN agents. 
+                    We investigated how architecture and preprocessing influences performance and evaluated transfer performance
+                    from Level 1-1 to Level 1-2.</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
+              <a class="project__card" href="https://cs231n.stanford.edu/2025/papers/text_file_840560503-CS_231n_Final_Project.pdf">
+                <img class="project__image" src="images/projects/GeoVision.png" alt="Image distribution over SF" />
+                <div class="project__content">
+                  <h3 class="project__title">GeoVision: Fine-Grained Urban Geolocation in San Francisco via Distribution-Aware Visual Models</h3>
+                  <p class="project__text">GeoVision predicts where a street photo was taken within San Francisco using a Vision 
+                    Transformer (StreetCLIP) plus custom geolocation heads. A 31x31 grid classifier reaches 66.8% top-1 accuracy, 
+                    while a probabilistic Gaussian head achieves ~600m mean localization error and provides uncertainty estimates. 
+                    The project includes map-based visualizations and attention rollouts to show what cues the model uses when 
+                    localizing images. </p>
+                </div>
+              </a>
+            </li>
+
+            <li class="project">
               <a class="project__card" href="projects/readmission.html">
                 <img class="project__image" src="images/projects/readmission.png" alt="Hospital icon" />
                 <div class="project__content">
@@ -205,29 +213,6 @@
                     several classifiers (Logistic Regression, tree models, XGBoost, and a neural net). Our best model (a Random Forest 
                     on LLM-based embeddings) achieved roughly F1 ≈ 0.79 and Accuracy ≈ 0.74, showing that 
                     clinical notes contain a signal for readmission prediction.</p>
-                </div>
-              </a>
-            </li>
-            
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="projects-title">
-        <div class="container">
-          <h2 class="section__title" id="projects-title">Other projects</h2>
-
-          <ul class="project-list">
-            <li class="project">
-              <a class="project__card" href="projects/swarm-controller.html">
-                <img class="project__image" src="images/projects/drones_moving.png" alt="Screenshot of the swarm in movement" />
-                <div class="project__content">
-                  <h3 class="project__title">Learning ROS 2: Swarm Controller</h3>
-                  <p class="project__text">I built a small ROS 2 drone-show simulation in Gazebo, 
-                    where users can spawn any number of drones and command them into a scalable line 
-                    or circle formation. A Python interface node uses an action client to send formation 
-                    settings to a C++ controller node, which coordinates the drone nodes via
-                    publisher/subscriber communication. Live feedback of the progress is sent back to the interface. </p>
                 </div>
               </a>
             </li>
@@ -265,7 +250,7 @@
             </svg>
           </a>
 
-          <a class="icon-link" href="mailto:nfkuhn@stanford.edu" aria-label="Email">
+          <a class="icon-link" href="mailto:nkuhn373@gmail.com" aria-label="Email">
             <!-- Email icon -->
             <svg class="icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
               <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
@@ -276,5 +261,17 @@
         <p class="footer__meta">&copy; Nils Kuhn &middot; 2026 &middot; nilskuhn.com</p>
       </div>
     </footer>
+
+    <script>
+      // Toggle BibTeX blocks under each publication
+      document.querySelectorAll("button[aria-controls^='bib-']").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const bib = document.getElementById(btn.getAttribute("aria-controls"));
+          const open = bib.hidden;
+          bib.hidden = !open;
+          btn.setAttribute("aria-expanded", String(open));
+        });
+      });
+    </script>
   </body>
 </html>
